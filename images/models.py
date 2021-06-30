@@ -22,5 +22,8 @@ class Location(models.Model):
     
 class Category(models.Model):
     name = models.CharField(max_length=55)
+
+    def save_category(self):
+        self.save()
     
         
