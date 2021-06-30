@@ -6,3 +6,6 @@ import datetime as dt
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length = 55)
+
+    def save_location(self):
+        self.save()
