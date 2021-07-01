@@ -36,10 +36,10 @@ class ImageTestClass(TestCase):
         self.location.save_location()
 
         # Creating a new category and saving it
-        self.category = Category(id=1,name = 'birthday')
+        self.category = Category(id=1,name = 'graduation')
         self.category.save_category()
 
-        self.new_image= Image(id=1, name='image', description='this is a test image', location=self.location,category=self.category)
+        self.new_image= Image(id=1, name='image', description='This is a test image', location=self.location,category=self.category)
         self.new_image.save()
 
         # Testing  instance
@@ -64,4 +64,38 @@ class ImageTestClass(TestCase):
         self.new_image.update_image(self.new_image.id, 'images/fits.jpg')
         changed_img = Image.objects.filter(image='images/fits.jpg')
         self.assertTrue(len(changed_img) > 0)
+
+class CategoryTestClass(TestCase):
+
+    # Set up method
+    def setUp(self):
+        self.category = Category(id=1,name = 'graduation')
+        
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.category,Category))
+        
+    # Testing Save Method
+    def test_save_method(self):
+        self.category.save_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) > 0)
+
+        #Testing delete function
+    def test_delete_category(self):
+        self.category.delete_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category)== 0)
+
+        #Testing update method
+    def test_update_category(self):
+        self.category.save_category()
+        self.category.update_category(self.category.id, 'studio')
+        changed_category = Category.objects.filter(name ='studio')
+        self.assertTrue(len(changed_category) > 0)
+    
+    def tearDown(self):
+            Location.objects.all().delete()
+            Category.objects.all().delete()
+            Image.objects.all().delete()
         
