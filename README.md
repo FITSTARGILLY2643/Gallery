@@ -1,7 +1,7 @@
 #  Fits Gallery
 ## Author
 Gilbert Kiprotich Mutai
-## Gallery  website
+## Description
 This is an application tha displays different categories of my photos that were taken in different locations. The user is able to view them as per location or even category and he/she can click on each to photo to see a larger version acampanied by photo's details.
 ## Project Set up Instructions
 * Ctrl + alt + t to open the terminal
@@ -10,11 +10,11 @@ This is an application tha displays different categories of my photos that were 
 * you can use code . or atom . to open it.
 
 ## Technologies Used
-*Python-Django - Used django as a framework.
-*HTML5- To display the content
-*CSS- Cascading styles for styling the html
-*Heroku- To host the application
-*Github- To host the source code and the live link
+* Python-Django - Used django as a framework.
+* HTML5- To display the content
+* CSS- Cascading styles for styling the html
+* Heroku- To host the application
+* Github- To host the source code and the live link
 ## Support and contact details
 Reach me on: +254 725060098 or fitstargilii1194@gmail.com
 ## Live Link
