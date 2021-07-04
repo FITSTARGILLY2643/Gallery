@@ -133,9 +133,9 @@ os.path.join(BASE_DIR,"static"),
 ]
 
 cloudinary.config( 
-  cloud_name = "", 
-  api_key = " ", 
-  api_secret = " " 
+  cloud_name = "dp7oczidd", 
+  api_key = "925512892168821", 
+  api_secret = "yMPnVPLGEbO5lz7SR-YzSXt6Eus" 
 )
 
 # Configure Django App for Heroku.

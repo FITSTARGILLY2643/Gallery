@@ -1,30 +1,15 @@
-<link rel="stylesheet" href="/static/css/index.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<nav class="navbar navbar-inverse">
+<div class="navbar navbar-light" style="background-color: #55BCC9;" role="navigation"
+    style="margin-bottom:0;">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'FitsGallery' %}"> Fits Gallery</a>
-            <a class="navbar-brand" href="{% url 'FitsGallery' %}"><i class="fa fa-fw fa-home"></i>Home</a>
-            <a class="navbar-brand" href="{% url 'search_location' %}"><ion-icon name="search-outline"></ion-icon> Search by location</a>
-        </div>
-        <div class="col-sm-4 col-md-4 navbar-right">
-
-            <form class="navbar-form" role="search" action="{% url 'search_results' %}">
-
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Category" name="category">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-
+            <a style="color:aliceblue" class="navbar-brand" href="{% url 'index' %}"><b>Fits Gallery</b></a>
+            <a style="color:aliceblue" class="navbar-brand" href="{% url 'index' %}">Home</a>
+            <a style="color:aliceblue" class="navbar-brand" href="{% url 'search_location' %}">Search by location</a>
+            <a style="color:aliceblue" class="navbar-brand" href="{% url 'search_results' %}">Search by Category</a>
+           
+        </div> 
     </div>
-</nav>
+</div>
 <div>
-    <h1 class="text-center">
-        WELCOME TO GENERALI GALLERY
-    </h1>
+
 </div>

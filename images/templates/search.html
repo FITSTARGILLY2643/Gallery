@@ -6,7 +6,7 @@
         {% if images%}
         <h2>Found {{ images|length }} of {{message}} Category.</h2>
         {% else %}
-        <h2> {{message}} Category</h2>
+        <h3 style="color:maroon"> {{message}} Category</h3>
         {% endif %}
 
         {% if images %}
@@ -58,7 +58,7 @@
             </div>
             {% empty %}
             <div class="row">
-                <h2 class="text-center">There No Image Items</h2>
+                <h2 class="text-center" style="color: red;">There are no image items</h2>
             </div>
             {% endfor %}
 

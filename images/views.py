@@ -3,7 +3,10 @@ from .models import Location,Category,Image
 from django.http import HttpResponse, Http404
 import datetime as dt
 # Create your views here.
-def fits_gallery(request):
+def index(request):
+    return render(request,'index.html')
+
+def gallery(request):
     date = dt.date.today()
     images = Image.objects.all()
     return render(request, 'gallery.html', {"date": date,"images":images})
@@ -13,10 +16,9 @@ def search_location(request):
         location = request.GET.get("location")
         searched_images = Image.filter_by_location(location)
         message = f"{location}"
-        # print("Image.......",searched_images)
         return render(request, 'location.html', {"message": message, "images": searched_images})
     else:
-        message = "You haven't searched for any image location"
+        message = "You haven't searched for any image"
         return render(request, 'location.html', {"message": message})
 
 def search_results(request):
@@ -24,9 +26,9 @@ def search_results(request):
         category = request.GET.get("category")
         searched_images = Image.search_by_category(category)
         message = f"{category}"
-        return render(request, 'search.html', {"message": message, "images": searched_images})
+        return render(request, 'category.html', {"message": message, "images": searched_images})
     else:
-        message = "You haven't searched for any image category"
-        return render(request, 'search.html', {"message": message})
+        message = "You haven't searched for any image"
+        return render(request, 'category.html', {"message": message})
 
 
